@@ -1,0 +1,18 @@
+{
+  "key.category.astralsky.configuration": "AstralSky",
+  "key.astralsky.open_configuration": "打开真实星空设置",
+  "screen.astralsky.title": "AstralSky 观测位置与时间",
+  "screen.astralsky.hint": "此处统一管理天文时间与位置；保存后自动重载 Iris 光影",
+  "screen.astralsky.mode": "时间模式：%s",
+  "screen.astralsky.mode.realtime": "系统实时日期与时间",
+  "screen.astralsky.mode.fixed": "指定日期与时间",
+  "screen.astralsky.mode.advancing": "指定时刻起随游戏时间推进",
+  "screen.astralsky.latitude": "纬度：%s°",
+  "screen.astralsky.longitude": "经度（东正）：%s°",
+  "screen.astralsky.utc_offset": "UTC 时差：%s 小时",
+  "screen.astralsky.year": "固定年份：%s",
+  "screen.astralsky.month": "固定月份：%s",
+  "screen.astralsky.day": "固定日期：%s",
+  "screen.astralsky.local_hour": "本地时刻：%s 时",
+  "screen.astralsky.north_offset": "北向旋转：%s°"
+}

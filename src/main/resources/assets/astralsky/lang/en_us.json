@@ -1,0 +1,18 @@
+{
+  "key.category.astralsky.configuration": "AstralSky",
+  "key.astralsky.open_configuration": "Open real-sky settings",
+  "screen.astralsky.title": "AstralSky Observer and Time",
+  "screen.astralsky.hint": "Astronomical time and position are managed here; Iris reloads automatically",
+  "screen.astralsky.mode": "Time mode: %s",
+  "screen.astralsky.mode.realtime": "System date and real time",
+  "screen.astralsky.mode.fixed": "Fixed date and time",
+  "screen.astralsky.mode.advancing": "Advance from fixed time with game clock",
+  "screen.astralsky.latitude": "Latitude: %s°",
+  "screen.astralsky.longitude": "Longitude (east +): %s°",
+  "screen.astralsky.utc_offset": "UTC offset: %s hours",
+  "screen.astralsky.year": "Fixed year: %s",
+  "screen.astralsky.month": "Fixed month: %s",
+  "screen.astralsky.day": "Fixed day: %s",
+  "screen.astralsky.local_hour": "Local hour: %s",
+  "screen.astralsky.north_offset": "North rotation: %s°"
+}

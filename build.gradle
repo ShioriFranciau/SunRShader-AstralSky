@@ -1,0 +1,93 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        astralsky {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+    testImplementation platform('org.junit:junit-bom:5.12.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+def resolvedModVersion = project.version.toString()
+
+processResources {
+    inputs.property 'version', resolvedModVersion
+
+    filesMatching('fabric.mod.json') {
+        expand version: resolvedModVersion
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 25
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
+    // StarAtlasTest decodes the committed atlases; the 16384x8192 Tycho-2
+    // raster alone needs around 540 MB.
+    maxHeapSize = '2g'
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+
+def resolvedProjectName = project.name
+
+jar {
+    from('LICENSE') {
+        rename { "${it}_${resolvedProjectName}" }
+    }
+}
+
+tasks.register('packageShaderpack', Zip) {
+    group = 'distribution'
+    description = 'Packages the standalone Iris shader pack.'
+    from layout.projectDirectory.dir('shaderpack/SunRShader-AstralSky')
+    archiveFileName = "SunRShader-AstralSky-${project.version}.zip"
+    destinationDirectory = layout.buildDirectory.dir('distributions')
+}
+
+tasks.named('build') {
+    dependsOn tasks.named('packageShaderpack')
+}
+
+publishing {
+    publications {
+        create('mavenJava', MavenPublication) {
+            from components.java
+        }
+    }
+}
+

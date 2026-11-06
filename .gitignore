@@ -1,0 +1,11 @@
+.gradle/
+.idea/
+.vscode/
+.zcode/
+build/
+logs/
+run/
+out/
+*.iml
+local.properties
+

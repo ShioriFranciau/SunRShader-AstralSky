@@ -1,0 +1,8 @@
+NASA Scientific Visualization Studio CGI Moon Kit
+https://svs.gsfc.nasa.gov/4720/
+
+The lunar colour texture is derived from data assembled by the Lunar
+Reconnaissance Orbiter Camera and Lunar Orbiter Laser Altimeter teams.
+Visualization and texture map: Ernie Wright, NASA Scientific Visualization
+Studio. NASA content is credited here in accordance with the source page and
+NASA media usage guidance.

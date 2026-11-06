@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "astralsky",
+  "version": "${version}",
+  "name": "SunRShader AstralSky Companion",
+  "description": "Date and location configuration bridge for the SunRShader AstralSky Iris pack.",
+  "authors": [
+    "AstralSky contributors"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.astralsky.client.AstralSkyClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "recommends": {
+    "iris": ">=1.11.7",
+    "sodium": ">=0.9.3-beta.1"
+  }
+}
+

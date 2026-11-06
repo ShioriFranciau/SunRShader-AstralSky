@@ -1,0 +1,10 @@
+Tycho-2 Catalogue (CDS I/259 / HEASARC TYCHO2)
+
+E. Hog, C. Fabricius, V. V. Makarov, S. Urban, T. Corbin, G. Wycoff,
+U. Bastian, P. Schwekendiek, and A. Wicenec (2000).
+Source: https://heasarc.gsfc.nasa.gov/W3Browse/all/tycho2.html
+Original catalogue: https://cdsarc.cds.unistra.fr/viz-bin/ReadMe/I/259
+
+Catalogue positions and photometry are distributed with the AstralSky atlas
+under the source catalogue's CC-BY-NC-3.0-IGO notice. The rasterized atlas is
+provided for non-commercial use with attribution.
